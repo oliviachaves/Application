@@ -1,0 +1,36 @@
+<body>
+<head>    
+    <script src="jsFiles/two/underscore-min.js"></script>
+    <script src="jsFiles/two/backbone-min.js"></script>
+    <script src="jsFiles/two/two.min.js"></script>
+</head>
+    
+<style></style>
+    
+    <div id='draw-shapes'></div>
+    
+<script>
+    
+    var B = 2200;
+    var DB_height = 150;
+    var D = 1000;
+
+    // Make an instance of two and place it on the page.
+    var elem = document.getElementById('draw-shapes');
+    var params = { width: 10000, height: 100000 };
+    var two = new Two(params).appendTo(elem);
+
+    var bottom = two.makeLine(-B/2, 0, B/2, 0);
+    var DB = two.makeLine(-B/2, DB_height, B/2, DB_height);
+    var sideBB = two.makeLine(-B/2, 0, -B/2, D);
+    var sideSB = two.makeLine(B/2, 0, B/2, D);
+    
+    bottom.linewidth = 25;
+    sideBB.linewidth = 5;
+    
+
+    two.update();
+    
+</script>
+
+</body>
