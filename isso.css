@@ -63,7 +63,7 @@ textarea.materialize-textarea {
   border-bottom: 1px solid #9e9e9e;
   border-radius: 0;
   outline: none;
-  height: 3rem;
+  height: 2rem;
   width: 100%;
   font-size: 1rem;
   margin: 0 0 0px 0;
@@ -83,4 +83,5 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+  height: 2rem;
 }

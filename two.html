@@ -1,36 +1,59 @@
 <body>
-<head>    
-    <script src="jsFiles/two/underscore-min.js"></script>
-    <script src="jsFiles/two/backbone-min.js"></script>
-    <script src="jsFiles/two/two.min.js"></script>
-</head>
-    
-<style></style>
-    
-    <div id='draw-shapes'></div>
-    
-<script>
-    
-    var B = 2200;
-    var DB_height = 150;
-    var D = 1000;
 
-    // Make an instance of two and place it on the page.
-    var elem = document.getElementById('draw-shapes');
-    var params = { width: 10000, height: 100000 };
-    var two = new Two(params).appendTo(elem);
+    <head>
+        <script src="jsFiles/two/underscore-min.js"></script>
+        <script src="jsFiles/two/backbone-min.js"></script>
+        <script src="jsFiles/two/two.min.js"></script>
+    </head>
 
-    var bottom = two.makeLine(-B/2, 0, B/2, 0);
-    var DB = two.makeLine(-B/2, DB_height, B/2, DB_height);
-    var sideBB = two.makeLine(-B/2, 0, -B/2, D);
-    var sideSB = two.makeLine(B/2, 0, B/2, D);
+    <style>
     
-    bottom.linewidth = 25;
-    sideBB.linewidth = 5;
-    
+    </style>
 
-    two.update();
-    
-</script>
+    <div id='draw-shapes' ></div>
+
+
+   
+    <script>
+        var B = 2200;
+        var DB_height = 150;
+        var D = 1000;
+        var hatch_opening = 1200;
+        
+
+        // Make an instance of two and place it on the page.
+        var elem = document.getElementById('draw-shapes');
+        var params = {
+            width: 3000,
+            height: 2000
+        };
+        var two = new Two(params).appendTo(elem);
+
+        var bottom = two.makeLine(-B / 2, D, B / 2, D);
+        var DB = two.makeLine(-B / 2, D - DB_height, B / 2, D - DB_height);
+        var centerKeel = two.makeLine(0, D, 0, D - DB_height);
+        
+        var sideSB = two.makeLine(-B / 2, D, -B / 2, 0);
+        var sidePS = two.makeLine(B / 2, D, B / 2, 0);
+        
+        var deckSB = two.makeLine(-B/2, 0, -hatch_opening/2, 0 );
+        var deckPS = two.makeLine(B/2, 0, hatch_opening/2, 0 );
+                
+        var hatchCoamingSB = two.makeLine(-hatch_opening/2, 0, -hatch_opening/2, 50);
+        var hatchCoamingPS = two.makeLine(hatch_opening/2, 0, hatch_opening/2, 50);
+        
+        var section = two.makeGroup(bottom, DB, sidePS, sideSB, deckPS, deckSB, hatchCoamingPS, hatchCoamingSB, centerKeel);
+        section.translation.set(two.width / 2, two.height / 2);
+     
+
+        bottom.linewidth = 25;
+        sideSB.linewidth = 25;
+
+        sidePS.linewidth = 25;
+
+
+        two.update();
+
+    </script>
 
 </body>

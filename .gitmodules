@@ -1,0 +1,3 @@
+[submodule "vesseljs"]
+	path = vesseljs
+	url = https://github.com/oliviachaves/vesseljs

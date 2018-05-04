@@ -1,0 +1,778 @@
+<body>
+
+    <head>
+        <title> olivia </title>
+        <meta charset="utf-8">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import nouislider.css-->
+        <link href="noUiSlider/nouislider.min.css" rel="stylesheet">
+        <!--Import css meu (over write)-->
+        <link href="isso.css" rel="stylesheet">
+
+        <script src="jsFiles/two/underscore-min.js"></script>
+        <script src="jsFiles/two/backbone-min.js"></script>
+        <script src="jsFiles/two/two.min.js"></script>
+
+    </head>
+
+    <style>
+        td {
+            line-height: 50%;
+            font-size: 80%;
+        }
+
+        th {
+            line-height: 50%;
+            font-size: 80%;
+        }
+
+        /*
+        input[type=number],
+        textarea.materialize-textarea {
+          border-bottom: 1px solid #9e9e9e;
+          
+          height: 3rem;
+          width: 100%;
+          font-size: 1rem;
+          margin: 0 0 20px 0;
+          padding: 0;
+      }
+*/
+
+    </style>
+
+    <!--header-->
+    <div class="navbar-fixed">
+        <nav style="background:#1c99ed">
+            <div class="nav-wrapper grey darken-3" style="height:96%">
+                <a href="#" data-activates="slide-out" class="button-collapse " style="display:block"><i class="material-icons">tune</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a>Decision Making Assistant</a></li>
+                    <li><a>Partial Report</a></li>
+                    <li><a>Saved Designs</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--header over-->
+
+    <!--Sidebar menu-->
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="images/Slide1.png" style="width:100%">
+                </div>
+                <a><span class="white-text name">Configure Parameters</span></a>
+                <a href="#!name"><span class="white-text name">John Doe</span></a>
+                <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+        </li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <!--Sidebar menu over-->
+
+    <!-- Title -->
+    <div class="section white">
+        <div class="row container" style="width:80%">
+            <h4 class="header"> Ship Structural Redesign Assistant</h4>
+            <p class="grey-text text-darken-3 lighten-3"> some short description </p>
+        </div>
+        <div class="row container">
+        </div>
+    </div>
+    <!-- Title over -->
+
+    <!--Main content container-->
+    <div class="row">
+        <div class="container" style="width:80%">
+            <div class="col s12 m12 l10">
+
+                <!-- Update Design Parameters section-->
+                <div class="section">
+                    <div id="Parameters" class="section scrollspy">
+                        <h4>Parameters</h4>
+                        <div class="divider"></div>
+
+
+                        <div class="row">
+                            <form action="#">
+                                <div class="row">
+                                    <div class="col s12 l6 file-field input-field">
+                                        <div class="btn blue">
+                                            <span>Load Design</span>
+                                            <input type="file" accept=".exp" onchange="readParam(event)">
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text" placeholder="Upload parameters here (Optional)">
+                                        </div>
+                                    </div>
+                                    <!-- LOADING SIGN
+                        <div class="preloader-wrapper small active" style="margin-top:2%">
+                            <div class="spinner-layer spinner-blue-only">
+                              <div class="circle-clipper left">
+                                <div class="circle"></div>
+                              </div><div class="gap-patch">
+                                <div class="circle"></div>
+                              </div><div class="circle-clipper right">
+                                <div class="circle"></div>
+                              </div>
+                            </div>
+                          </div>
+-->
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 l11">
+                                        <ul class="collapsible" data-collapsible="expandable">
+                                            <li>
+                                                <div class="collapsible-header active"><i class="material-icons">directions_boat</i>Operatinal Profile </div>
+                                                <div class="collapsible-body" style="background:#fafafa" style="border:solid">
+
+                                                    <div class="row" style="padding-top:2%">
+
+                                                        <div class="col s4 m3 l3" style='white-space: nowrap; margin-left:2%;'>
+                                                            Service Area Notation <a class="modal-trigger" href="#modal1"> <i class=" material-icons tiny">info_outline</i></a>
+                                                        </div>
+                                                        <div id="modal1" class="modal modal-fixed-footer">
+                                                            <div class="modal-content">
+                                                                <h4>Service Area Notation Legend</h4>
+                                                                <img src="images/serviceAreaNotation.PNG" style="width:100%">
+                                                            </div>
+                                                            <div class="modal-footer grey lighten-3">
+                                                                <h6><i>DNVGL-RU-Ship 2018: Part 1 Chap 2 Sec 5</i></h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col s7 l8">
+                                                            <input id="R0" name="serviceAreaNotation" onchange="ship.updateParam(id)" type="radio" class="with-gap" checked>
+                                                            <label style="margin-left:5%" for="R0">R0</label>
+
+                                                            <input id="R1" name="serviceAreaNotation" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="R1">R1</label>
+
+                                                            <input id="R2" name="serviceAreaNotation" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="R2">R2</label>
+
+                                                            <input id="R3" name="serviceAreaNotation" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="R3">R3</label>
+
+                                                            <input id="R4" name="serviceAreaNotation" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="R4">R4</label>
+
+                                                            <input id="RE" name="serviceAreaNotation" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="RE">RE</label>
+                                                        </div>
+                                                    </div>
+                                                    <!--                                                    <div class="divider"></div>-->
+                                                    <div class="row">
+                                                        <div class="col s4 m3 l3" style='white-space: nowrap; margin-left:2%;'>
+                                                            Load Condition
+                                                        </div>
+                                                        <div class="col s7 l8">
+                                                            <input id="full load" name="loadCondition" onchange="ship.updateParam(id)" type="radio" class="with-gap" checked>
+                                                            <label style="margin-left:5%" for="full load">Full Load</label>
+
+                                                            <input id="ballast" name="loadCondition" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="ballast">Ballast</label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="collapsible-header active"><i class="material-icons">open_with</i>Main Dimensions</div>
+                                                <div class="collapsible-body" style="background:#fafafa" style="border:solid">
+                                                    <div class="row" style="padding-top:2%">
+                                                        <div class="col s2 l1" style='margin-left:5%;'>
+                                                            <input id="L" onchange="ship.updateParam(id)" type="number" step="0.1" min="0" max="100">
+                                                            <label for="Lpp">Lpp  [m]</label>
+                                                        </div>
+                                                        <div class="col s2 l1">
+                                                            <input id="B" onchange="ship.updateParam(id)" type="number" step="0.1" min="0">
+                                                            <label for="B">Beam  [m]</label>
+                                                        </div>
+                                                        <div class="col s2 l1">
+                                                            <input id="T" onchange="ship.updateParam(id)" type="number" step="0.1" min="0">
+                                                            <label for="T">Draft  [m]</label>
+                                                        </div>
+                                                        <div class="col s2 l1">
+                                                            <input id="D" onchange="ship.updateParam(id)" type="number" step="0.1" min="0">
+                                                            <label for="D">Depth  [m]</label>
+                                                        </div>
+                                                        <div class="col s2 l1">
+                                                            <input id="DB_height" onchange="ship.updateParam(id)" type="number" step="0.1" min="0">
+                                                            <label for="DB_height">Double botom height [m]</label>
+                                                        </div>
+                                                        <div class="col s2 l1">
+                                                            <input id="hatchOpening" onchange="ship.updateParam(id)" type="number" step="0.1" min="0">
+                                                            <label for="hatchOpening">Hatch opening [m]</label>
+                                                        </div>
+                                                        <div class="col s2 l1">
+                                                            <input id="LWT" onchange="ship.updateParam(id)" type="number" step="0.1" min="0">
+                                                            <label for="LWT">LWT [kN]</label>
+                                                        </div>
+                                                        <div class="col s2 l1">
+                                                            <input id="DWT" onchange="ship.updateParam(id)" type="number" step="0.1" min="0">
+                                                            <label for="DWT">DWT [kN]</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="collapsible-header active"><i class="material-icons">grain</i>Material</div>
+                                                <div class="collapsible-body" style="background:#fafafa" style="border:solid">
+
+                                                    <div class="row" style="padding-top:2%">
+                                                        <div class="col s3 m2 l2" style='white-space: nowrap; margin-left:2%; margin-right:2%'>
+                                                            Steel Grade <a class="modal-trigger" href="#modal2"> <i class=" material-icons tiny">info_outline</i></a>
+                                                        </div>
+                                                        <div id="modal2" class="modal modal-fixed-footer">
+                                                            <div class="modal-content">
+                                                                <h4>Steel Grades</h4>
+                                                                <img src="images/steel%20grades.PNG" style="width:100%">
+                                                            </div>
+                                                            <div class="modal-footer grey lighten-3">
+                                                                <h6><i>DNVGL-RU-Ship 2018: Part 2 Chap 2 Sec 3</i></h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col  s7 m9 l9">
+                                                            <input id="NV-NS" name="steelGrades" onchange="ship.updateParam(id)" type="radio" class="with-gap" checked>
+                                                            <label for="NV-NS">NV-NS</label>
+
+                                                            <input id="NV-32" name="steelGrades" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="NV-32">NV-32</label>
+
+                                                            <input id="NV-36" name="steelGrades" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="NV-36">NV-36</label>
+
+                                                            <input id="NV-40" name="steelGrades" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="NV-40">NV-40</label>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- END of Update Design Parameters section-->
+
+
+                <div class="section">
+                    <div id="HullGirderLoads" class="section scrollspy">
+                        <h4>Hull Girder Loads</h4>
+                        <div class="divider"></div>
+                        <p>The loads calculated in this section are <i>Rule</i> minimum values, based on DNVGL-RU-Ship Pt.3 Chap.4 Sec.4 </p>
+                        <div class="row">
+                            <div class="col s12 l6">
+                                <table class="highlight">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:30%"></th>
+                                            <th style="width:1%"></th>
+                                            <th>Maximum</th>
+                                            <th>Unity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>M<sub> sw-h-min</sub></td>
+                                            <td><a class="modal-trigger" href="#M_sw_min"><i class=" material-icons tiny">info_outline</i></a></td>
+                                            <td id="rule_M_sw_h_mid"></td>
+                                            <td>kN.m</td>
+                                        </tr>
+                                        <tr>
+                                            <td>M<sub> sw-s-min</sub> </td>
+                                            <td><a class="modal-trigger" href="#M_sw_min"><i class=" material-icons tiny">info_outline</i></a></td>
+                                            <td id="rule_M_sw_s_mid"></td>
+                                            <td>kN.m</td>
+                                        </tr>
+                                        <tr>
+                                            <td>M<sub>wv-h</sub> </td>
+                                            <td><a class="modal-trigger" href="#M_wv"><i class=" material-icons tiny">info_outline</i></a></td>
+                                            <td id='rule_M_wv_h_mid'></td>
+                                            <td>kN.m</td>
+                                        </tr>
+                                        <tr>
+                                            <td>M<sub>wv-s</sub> </td>
+                                            <td><a class="modal-trigger" href="#M_wv"><i class=" material-icons tiny">info_outline</i></a></td>
+                                            <td id='rule_M_wv_s_mid'></td>
+                                            <td>kN.m</td>
+                                        </tr>
+                                        <tr>
+                                            <td>| M<sub>sw</sub> + M<sub>wv</sub> |<i><sub> max</sub></i></td>
+                                            <td></td>
+                                            <td id="M_max_sum"></td>
+                                            <td>kN.m</td>
+                                        </tr>
+                                        <tr style="line-height:20px">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Q<sub>sw-pos-min</sub> </td>
+                                            <td><a class="modal-trigger" href="#Q_sw_min"><i class=" material-icons tiny">info_outline</i></a></td>
+                                            <td></td>
+                                            <td>kN</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Q<sub>sw-neg-min</sub> </td>
+                                            <td><a class="modal-trigger" href="#Q_sw_min"><i class=" material-icons tiny">info_outline</i></a></td>
+                                            <td></td>
+                                            <td>kN</td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="M_sw_min" class="modal modal-fixed-footer">
+                                <div class="modal-content">
+                                    <img src="images/M_sw_min.png" style="width:100%">
+                                </div>
+                                <div class="modal-footer grey lighten-3">
+                                    <h6><i>DNVGL-RU-Ship 2018: Part 3 Chap 4 Sec 4</i></h6>
+                                </div>
+                            </div>
+                            <div id="M_wv" class="modal modal-fixed-footer">
+                                <div class="modal-content">
+                                    <img src="images/M_wv_min.png" style="width:100%">
+                                </div>
+                                <div class="modal-footer grey lighten-3">
+                                    <h6><i>DNVGL-RU-Ship 2018: Part 3 Chap 4 Sec 4</i></h6>
+                                </div>
+                            </div>
+                            <div id="Q_sw_min" class="modal modal-fixed-footer">
+                                <div class="modal-content">
+                                    <img src="images/Q_sw.PNG" style="width:100%">
+                                </div>
+                                <div class="modal-footer grey lighten-3">
+                                    <h6><i>DNVGL-RU-Ship 2018: Part 3 Chap 4 Sec 4</i></h6>
+                                </div>
+                            </div>
+
+                            <div class="col s12 l6">
+                                <div id="chartHogging" style="height: 300px; width: 100%;"></div>
+                                <div id="chartSagging" style="height: 300px; width: 100%;"></div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div id="HullGirderCrossSection" class="section scrollspy">
+                        <h4> Hull Girder Cross Section</h4>
+                        <div class="divider"></div>
+                        <p>Content </p>
+
+                        <div class="row">
+                            <div class="col s12 l6">
+                                <table class="highlight">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th style="width:35%">Actual</th>
+                                            <th>Unity</th>
+                                            <td></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>s</td>
+                                            <td><input id="s" style="width:50%;height:50%" onchange="ship.updateParam(id)" type="number" step="0.1" min="0"></td>
+                                            <td>mm</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i>l</i></td>
+                                            <td><input id="l" style="width:50%;height:50%" height:50% onchange="ship.updateParam(id)" type="number" step="0.1" min="0"></td>
+                                            <td>mm</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>t<i><sub>plate</sub></i></td>
+                                            <td id="t_plate"></td>
+                                            <td>mm</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="line-height:120%; padding:5">Stiff. <br> Profile</td>
+                                            <td>
+                                                <div>
+                                                    <select id="stiffSelector" class="browser-default" onchange="ship.updateParam(value)">
+                                                      <optgroup label="HP ">
+                                                        <option id="HP 180x9" value="HP 180x9">HP 180x9</option>
+                                                        <option id="HP 200x11" value="HP 200x11">HP 200x11</option>
+                                                      </optgroup>
+                                                      <optgroup label="HB">
+                                                        <option id="HB 180x8" value="HB 180x8">HB 180x8</option>
+                                                        <option id="HB 180x9" value="HB 180x9">HB 180x9</option>
+                                                        <option id="HB 220x10" value="HB 220x10">HB 220x10</option>
+                                                        <option id="HP 220x12" value="HB 220x12">HB 220x12</option>
+                                                      </optgroup>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td id="stiffFeedback" style="line-height:120%"></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>t<sub>eq</sub></td>
+                                            <td id="t_eq"></td>
+                                            <td>mm</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                    <br>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Actual</th>
+                                            <th>Required</th>
+                                            <th>Unity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Z<sub>B</sub></td>
+                                            <td id="Z_B_gr"></td>
+                                            <td id="Z_R_gr"></td>
+                                            <td>m<sup>3</sup>
+                                                <td>
+                                        </tr>
+                                        <tr>
+                                            <td>Z<sub>D</sub></td>
+                                            <td id="Z_D_gr"></td>
+                                            <td id="Z_R_gr1"></td>
+                                            <td>m<sup>3</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>I<sub>yy</sub></td>
+                                            <td id="I_y_n50"></td>
+                                            <td id="I_yR_gr"></td>
+                                            <td>m<sup>4</sup></td>
+                                        </tr>
+                                        <tr>
+                                            <td>f<sub>2</sub></td>
+                                            <td id="f2"></td>
+                                            <td> &lt; 1 </td>
+                                            <td></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="col s12 l6" id='draw-shapes'></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div id="DeckStructure" class="section scrollspy">
+                        <h4>Deck Stucture</h4>
+                        <div class="divider"></div>
+                        <p>Content </p>
+                        <p>a</p>
+                        <p>a</p>
+
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div id="SideStructure" class="section scrollspy">
+                        <h4>Sides Stucture</h4>
+                        <div class="divider"></div>
+                        <p>Content </p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+
+                    </div>
+                </div>
+                <div class="section">
+                    <div id="BottomStructure" class="section scrollspy">
+                        <h4>Bottom Stucture</h4>
+                        <div class="divider"></div>
+                        <p>Content </p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div id="DetDesignBottomStruc" class="section scrollspy">
+                        <h4>Detailed Design of Bottom Unity</h4>
+                        <div class="divider"></div>
+                        <p>Content </p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div id="3d" class="section scrollspy">
+                        <h4>3D Orbit View of Hull</h4>
+                        <div class="divider"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- side scroll-->
+        <div id="scrollspy" class="col hide-on-med-and-down l2">
+            <div style="position:fixed">
+                <ul class="section table-of-contents">
+                    <li><a href="#Parameters">Parameters</a></li>
+                    <li><a href="#HullGirderLoads">Hull Girder Loads</a></li>
+                    <li><a href="#HullGirderCrossSection">Hull Girder Cross Section</a></li>
+                    <li><a href="#DeckStructure">Deck Structure</a></li>
+                    <li><a href="#SideStructure">Side Structure</a></li>
+                    <li><a href="#BottomStructure">Bottom Structure</a></li>
+                    <li><a href="#DetDesignBottomStruc">Detailed Design of Bottom Unity</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- side scroll over-->
+
+    </div>
+
+
+    <!-- footer -->
+    <footer class="page-footer grey ">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer over-->
+
+    <script src="materialize/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script src="noUiSlider/nouislider.min.js"></script>
+    <script src="wnumb/wNumb.js"></script>
+    <script src="jsFiles/math.js"></script>
+    <script src="jsFiles/taffy.js"></script>
+    <script src="canvasJS/canvasjs.min.js"></script>
+    <script src="canvasJS/jquery.canvasjs.min.js"></script>
+
+    <script src="jsFiles/materials.js"></script>
+    <script src="jsFiles/shipConstructor.js"></script>
+
+    <script src="jsFiles/LoadSection.js"></script>
+    <script src="jsFiles/paramSection.js"></script>
+    <script src="jsFiles/crossSection.js"></script>
+    
+    <script src="vesseljs/build/Vessel.js"></script>
+    <script src="vesseljs/examples/js/libs/three.js"></script>
+	<script src="vesseljs/examples/js/libs/STLLoader.js"></script>
+	<script src="vesseljs/examples/js/libs/OrbitControls.js"></script>
+    <script src="vesseljs/examples/js/Ship3D.js"></script>
+
+
+
+
+    <script>
+
+
+        //Ready renderer and scene
+        (function() {
+            renderer = new THREE.WebGLRenderer({
+                antialias: true
+            });
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setClearColor(0xA9CCE3, 1);
+
+            // get the div that will hold the renderer
+            var container = document.getElementById('3d');
+            // add the renderer to the div
+            container.appendChild(renderer.domElement);
+
+            scene = new THREE.Scene();
+
+            //Camera and controls:
+            camera = new THREE.PerspectiveCamera(50);
+            camera.up.set(0, 0, 1);
+            scene.add(camera);
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+            //Respond to window resize:
+            function onResize() {
+                renderer.setSize(container.clientWidth, container.clientHeight);
+                camera.aspect = container.clientWidth / container.clientHeight;
+                camera.updateProjectionMatrix();
+            }
+            window.addEventListener("resize", onResize);
+            onResize(); //Ensure the initial setup is good too
+
+            //Add lights:
+            scene.add(new THREE.AmbientLight(0xffffff, 0.3));
+            scene.add(function() {
+                let sun = new THREE.DirectionalLight(0xffffff, 1);
+                sun.position.set(1, 1, 1);
+                return sun;
+            }());
+        })();
+
+
+
+
+        // load default spec
+        new THREE.FileLoader().load("vesseljs/examples/data/ship_specifications/PX121.json", useShipSpec);
+
+
+        
+        function useShipSpec(contents) {
+	shipspec = JSON.parse(contents);
+	shipVis = new Vessel.Ship(shipspec);
+	if (typeof ship3D !== "undefined") {
+		scene.remove(ship3D);
+	}
+	ship3D = new Ship3D(shipVis, "vesseljs/examples/data/STL files");
+	scene.add(ship3D);
+
+	// document.getElementById("length").innerHTML = (shipVis.structure.hull.attributes.LOA).toFixed(2);
+	// document.getElementById("beam").innerHTML = (shipVis.structure.hull.attributes.BOA).toFixed(2);
+	// document.getElementById("depth").innerHTML = (shipVis.structure.hull.attributes.Depth).toFixed(2);
+	
+	let LOA = shipVis.structure.hull.attributes.LOA;
+	camera.position.set(0.7*LOA, 0.7*LOA, 0.7*LOA);
+	controls.target = new THREE.Vector3(LOA/2,0,0);
+	controls.update();
+	animate();
+}
+
+function animate() {
+	requestAnimationFrame(animate);			
+	renderer.render(scene, camera);
+}
+
+
+
+        // initializing scrollspy
+        $(document).ready(function() {
+            $('.scrollspy').scrollSpy();
+        });
+
+        // initializing side menu
+        $(".button-collapse").sideNav();
+
+        $('.button-collapse').sideNav({
+            menuWidth: 300, // Default is 300
+            edge: 'left', // Choose the horizontal origin
+            closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            draggable: true, // Choose whether you can drag to open on touch screens,
+            //onOpen: function(el) { /* Do Stuff* / },        // A function to be called when sideNav is opened
+            //onClose: function(el) { /* Do Stuff* / },       // A function to be called when sideNav is closed
+        });
+
+        // initializing collapsible
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+        });
+
+        //modal 
+        $(document).ready(function() {
+            $('.modal').modal();
+        });
+
+        //forms
+        //        $(document).ready(function(){
+        //            $('select').formSelect();
+        //        });
+
+
+        // ---------------- CROSS SECTION DRAWING ------------------------ //
+
+        var B = ship.B * 10;
+        var DB_height = ship.DB_height * 10;
+        var D = ship.D * 10;
+        var hatch_opening = ship.hatchOpening * 10;
+
+
+        // Make an instance of two and place it on the page.
+        var elem = document.getElementById('draw-shapes');
+        var params = {
+            width: 300,
+            height: 200
+        };
+        var two = new Two(params).appendTo(elem);
+
+        var bottom = two.makeLine(-B / 2, D, B / 2, D);
+        var DB = two.makeLine(-B / 2, D - DB_height, B / 2, D - DB_height);
+        var centerKeel = two.makeLine(0, D, 0, D - DB_height);
+
+        var sideSB = two.makeLine(-B / 2, D, -B / 2, 0);
+        var sidePS = two.makeLine(B / 2, D, B / 2, 0);
+
+        var deckSB = two.makeLine(-B / 2, 0, -hatch_opening / 2, 0);
+        var deckPS = two.makeLine(B / 2, 0, hatch_opening / 2, 0);
+
+        var hatchCoamingSB = two.makeLine(-hatch_opening / 2, 0, -hatch_opening / 2, 5);
+        var hatchCoamingPS = two.makeLine(hatch_opening / 2, 0, hatch_opening / 2, 5);
+
+        var section = two.makeGroup(bottom, DB, sidePS, sideSB, deckPS, deckSB, hatchCoamingPS, hatchCoamingSB, centerKeel);
+        section.translation.set(two.width / 2, two.height / 4);
+
+        bottom.linewidth = 5;
+        sideSB.linewidth = 5;
+
+        sidePS.linewidth = 5;
+
+
+        two.update();
+
+        ship.buildCrossSection();
+        ship.fillInParam();
+        ship.f2('strength');
+
+    </script>
+</body>

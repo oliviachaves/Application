@@ -56,12 +56,13 @@ var Stiffeners =[
     {profile:'HP', dimen:'180x9',  name:'HP 180x9',  z:166, area: 2339},
     {profile:'HP', dimen:'200x11', name:'HP 200x11', z:233, area: 2766},
     
-    {profile:'HB', dimen:'120x8',  name:'HB 180x8',  z:197, area: 1886},
+    {profile:'HB', dimen:'180x8',  name:'HB 180x8',  z:197, area: 1886},
     {profile:'HB', dimen:'180x9',  name:'HB 180x9',  z:203, area: 2066},
     {profile:'HB', dimen:'220x10', name:'HB 220x10', z:329, area: 2900},
     {profile:'HB', dimen:'220x12', name:'HB 220x12', z:362, area: 3340},
     
     ];
+
 
 //safety factors (table 1 pg. 123) - needs revisao
 var SF = {                  //(pg.58)

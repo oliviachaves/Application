@@ -1,98 +1,104 @@
 <body>
-<head>
-    <title> olivia </title>
-	<meta charset="utf-8">
-    <!--Let browser know website is optimized for mobile-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import nouislider.css-->
-    <link href="noUiSlider/nouislider.min.css" rel="stylesheet">
-    <!--Import css meu (over write)-->
-    <link href="isso.css" rel="stylesheet">
-    
-</head>
-    
-<style>
+    <head>
+        <title> olivia </title>
+        <meta charset="utf-8">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
 
-    .input{
-        text-align: center;
-    }
-</style>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import nouislider.css-->
+        <link href="noUiSlider/nouislider.min.css" rel="stylesheet">
+        <!--Import css meu (over write)-->
+        <link href="isso.css" rel="stylesheet">
 
-<!--header-->
-<div class="navbar-fixed">
-    <nav style="background:#1c99ed">
-    <div class="nav-wrapper grey darken-3" style="height:96%">
-      <a href="#" data-activates="slide-out" class="button-collapse " style="display:block"><i class="material-icons">tune</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a>Decision Making Assistant</a></li>
-        <li><a>Partial Report</a></li>
-        <li><a>Saved Designs</a></li>
-        
-      </ul>
+    </head>
+
+    <style>
+        .input {
+            text-align: center;
+        }
+
+    </style>
+
+    <!--header-->
+    <div class="navbar-fixed">
+        <nav style="background:#1c99ed">
+            <div class="nav-wrapper grey darken-3" style="height:96%">
+                <a href="#" data-activates="slide-out" class="button-collapse " style="display:block"><i class="material-icons">tune</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a>Decision Making Assistant</a></li>
+                    <li><a>Partial Report</a></li>
+                    <li><a>Saved Designs</a></li>
+
+                </ul>
+            </div>
+        </nav>
     </div>
-  </nav>
-</div>
-<!--header over-->
+    <!--header over-->
 
-<!--Sidebar menu-->
-<ul id="slide-out" class="side-nav">
-    <li><div class="user-view">
-      <div class="background">
-        <img src="images/Slide1.png" style="width:100%">
-      </div>
-      <a><span class="white-text name">Configure Parameters</span></a>
-      <a href="#!name"><span class="white-text name">John Doe</span></a>
-      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-    </div></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-</ul>
-<!--Sidebar menu over-->
-    
-<!-- Title -->    
-<div class="section white">
-    <div class="row container" style="width:80%">
-      <h4 class="header"> Ship Structural Redesign Assistant</h4>
-      <p class="grey-text text-darken-3 lighten-3"> some short description </p>
-    </div>
-    <div class="row container">
+    <!--Sidebar menu-->
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="images/Slide1.png" style="width:100%">
+                </div>
+                <a><span class="white-text name">Configure Parameters</span></a>
+                <a href="#!name"><span class="white-text name">John Doe</span></a>
+                <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+        </li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <!--Sidebar menu over-->
+
+    <!-- Title -->
+    <div class="section white">
+        <div class="row container" style="width:80%">
+            <h4 class="header"> Ship Structural Redesign Assistant</h4>
+            <p class="grey-text text-darken-3 lighten-3"> some short description </p>
         </div>
-</div>    
-<!-- Title over -->  
-    
-<!--Main content container-->
-<div class="row">
-  <div class="container" style="width:80%">
-    <div class="col s12 m12 l10">
-    
-<!-- Update Design Parameters section-->
-     <div class="section"> 
-            <div id="Parameters" class="section scrollspy"> <h4>Parameters</h4>
-              <div class="divider"></div>
-            
-              
-                <div class="row"> 
-                  <form action="#">
-                    <div class="row">
-                        <div class="col s12 l6 file-field input-field">
-                          <div class="btn blue">
-                            <span>Load Design</span>
-                            <input type="file">
-                          </div>
-                          <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text">
-                          </div>
-                        </div>
-<!-- LOADING SIGN
+        <div class="row container">
+        </div>
+    </div>
+    <!-- Title over -->
+
+    <!--Main content container-->
+    <div class="row">
+        <div class="container" style="width:80%">
+            <div class="col s12 m12 l10">
+
+                <!-- Update Design Parameters section-->
+                <div class="section">
+                    <div id="Parameters" class="section scrollspy">
+                        <h4>Parameters</h4>
+                        <div class="divider"></div>
+
+
+                        <div class="row">
+                            <form action="#">
+                                <div class="row">
+                                    <div class="col s12 l6 file-field input-field">
+                                        <div class="btn blue">
+                                            <span>Load Design</span>
+                                            <input type="file" accept=".exp" onchange="readParam(event)">
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text">
+                                        </div>
+                                    </div>
+                                    <!-- LOADING SIGN
                         <div class="preloader-wrapper small active" style="margin-top:2%">
                             <div class="spinner-layer spinner-blue-only">
                               <div class="circle-clipper left">
@@ -105,288 +111,362 @@
                             </div>
                           </div>
 -->
-                    </div>
-                    <div class="row">
-                        <div class="col s12 l11">
-                        
-                      <ul class="collapsible" data-collapsible="expandable">
-                        <li>
-                          <div class="collapsible-header active"><i class="material-icons">open_with</i>Form Parameters</div>
-                    
-                            <div class="collapsible-body" style="background:#fafafa" style="border:solid">
-                              
-                            <div class="row" style="padding-top:2%">
-                                <div class="col s2 l1 offset-s1 offset-l1">
-                                    <input id="L" onchange="ship.updateParam(id)" type="number" step="0.1" min="0" max="100"> 
-                                    <label for="Lpp">Lpp  [m]</label>
                                 </div>
-                                 
-                                <div class="col s2 l1">
-                                    <input id="B" onchange="ship.updateParam(id)" type="number" step="0.1" min="0" > 
-                                    <label for="B">Beam  [m]</label>
-                                </div>
-                                <div class="col s2 l1">
-                                    <input id="T" onchange="ship.updateParam(id)" type="number" step="0.1" min="0" > 
-                                    <label for="T">Draft  [m]</label>
-                                </div> 
-                                <div class="col s2 l1">
-                                    <input id="D" onchange="ship.updateParam(id)" type="number" step="0.1" min="0" > 
-                                    <label for="D">Depth  [m]</label>
-                                </div> 
-                              </div>
-                              
-                            </div>
-                         
-                        </li>
-                        
-                        <li>
-                          <div class="collapsible-header active"><i class="material-icons">grid_on</i>Structure</div>
-                          <div class="collapsible-body" style="background:#fafafa">
-                            
-                              <div class="row" style="padding-top:2%">
-                                <div class="col s2 l1 offset-s2 offset-l1">
-                                    <input id="LWT" onchange="ship.updateParam(id)" type="number" step="0.1" min="0" > 
-                                    <label for="D">LWT [kN]</label>
-                                </div>
-                                <div class="col s2 l1">
-                                    <input id="DWT" onchange="ship.updateParam(id)" type="number" step="0.1" min="0" > 
-                                    <label for="T">DWT [kN]</label>
-                                </div>
-                                <div class="col s2 l1">
-                                    <input id="s" onchange="ship.updateParam(id)" type="number" step="0.1" min="0" > 
-                                    <label for="s">stiffeners spacing [m]</label>
-                                </div>   
-                                <div class="col s2 l1">
-                                    <input id="l" onchange="ship.updateParam(id)" type="number" step="0.1" min="0" > 
-                                    <label for="l">stifferners lenght [m]</label>
-                                </div>
-                                <div class="col s2 l1">
-                                    <input id="DB_height" onchange="ship.updateParam(id)" type="number" step="0.1" min="0" > 
-                                    <label for="DB_height">Double botom height [m]</label>
-                                </div>
-                                 
-                                 
-                              </div>
-                              
-                            </div>
-                        </li>
-                      </ul>
-                      
-                   </div> 
-                   </div> 
-                    
-                  </form>
-
-                </div>
-            </div>
-          
-    </div>   
-        
-<!--Load Distribution section-->    
-    <div class="section">  
-      <div id="loadDistribution" class="row scrollspy">
-          <div  class="section"> <h4>Weight Distribution</h4>
-              <div class="divider" ></div>
-                <p>Input load conditions in this section. The <b>range inputs refer to the vessel length</b>, and the following field refers to the load applied to the specified length range. </p>
-
-
-              <div id="loadSlidersPlace" class="col s12 m12 l6" >
-
-                    <!--range input 1 -->
-                    <div id="sliderBlock1" class="row">
-                      <div class="col s12">
-                        <div class="card-panel" style="padding-top:2px;padding-bottom:1px;margin:0" ><i>Weight 1</i><br><br><br>
-                            <div class="row" >
-                                <div class="col s8">
-                                  <div id="sliderLoadDist1"></div>
-                                </div>
-                                <div class="input-field col s2 offset-s1" style="margin-top:-3%">
-                                    <input onchange="getInputValue(1)" type="number" id="inputLoad1" placeholder="load" value="1200" style="width:60"> 
-                                    <label for="inputLoad1">ton/m</label>
-                                </div>
-                                <div class="col s1 ">
-                                    <a onclick="clearThis(1)" class="waves-effect waves-gray tooltipped" data-position="right" data-delay="50" data-tooltip="clear"><i class="material-icons">clear</i></a>
-                                </div>
-
-
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!--range input 2 -->
-                    <div id="sliderBlock2" class="row">
-                      <div class="col s12">
-                        <div class="card-panel" style="padding-top:2px;padding-bottom:1px;margin:0" ><i>Weight 2</i><br><br><br>
-                            <div class="row" >
-                                <div class="col s8">
-                                  <div id="sliderLoadDist2"></div>
-                                </div>
-                                <div class="input-field col s2 offset-s1" style="margin-top:-3%">
-                                    <input onchange="getInputValue(2)" type="number" id="inputLoad2" placeholder="load" value="1200" style="width:60">
-                                    <label for="load2">ton/m</label>
-                                </div>
-                                <div class="col s1 ">
-                                    <a onclick="clearThis(2)" class="waves-effect waves-gray tooltipped" data-position="right" data-delay="50" data-tooltip="clear"><i class="material-icons">clear</i></a>
-                                </div>
-
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-
-
-<!--                    <a id="addLoadInputButton" class="btn-floating btn-medium waves-effect waves-light blue tooltipped" data-position="right" data-delay="50" data-tooltip="add load input" onclick="createSlider()"><i class="material-icons">add</i></a>-->
-
-              </div>
-
-              <!--charts-->
-              <div id='chartsColun' class="col s12 m12 l6">
-                
+                                <div class="row">
+                                    <div class="col s12 l11">
+                                        <ul class="collapsible" data-collapsible="expandable">
+                                            <li>
+                                                <div class="collapsible-header active"><i class="material-icons">directions_boat</i>Operatinal Profile </div>
+                                                <div class="collapsible-body" style="background:#fafafa" style="border:solid">
+                                                    
+                                                    <div class="row" style="padding-top:2%">
+                                                        
+                                                        <div class="col s4 m3 l3" style='white-space: nowrap; margin-left:2%;'>
+                                                            Service Area Notation <a class="modal-trigger" href="#modal1"> <i class=" material-icons tiny">info_outline</i></a>
+                                                        </div>
+                                                        <div id="modal1" class="modal">
+                                                            <div class="modal-content">
+                                                              <h4>Service Area Notation Legend</h4>
+                                                              <h5>DNVGL-RU-Ship 2018: Part 1 Chap 2 Sec 5</h5>
+                                                              <img src="images/serviceAreaNotation.PNG" style="width:100%">
+                                                            </div>
+                                                          </div>
+                                                        
+                                                        <div class="col s7 l8">
+                                                            <input id="R0" name="serviceAreaNotation" onchange="ship.updateParam(id)" type="radio" class="with-gap" checked>
+                                                            <label style="margin-left:5%" for="R0">R0</label>
+                                                        
+                                                            <input id="R1" name="serviceAreaNotation" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="R1">R1</label>
+                                                        
+                                                            <input id="R2" name="serviceAreaNotation" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="R2">R2</label>
+                                                       
+                                                            <input id="R3" name="serviceAreaNotation" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="R3">R3</label>
+                                                       
+                                                            <input id="R4" name="serviceAreaNotation" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="R4">R4</label>
+                                                       
+                                                            <input id="RE" name="serviceAreaNotation" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="RE">RE</label>
+                                                        </div>
+                                                    </div>
 <!--
-                  <div id="chartWeightDist" style="height: 300px; width: 100%;"></div>                
+                                                    <div class="row">
+                                                        <div class="col" style='margin-left:2%;'>
+                                                        something 
+                                                        </div>
+                                                    </div>
+-->
+                                                </div>
+                                            </li>
+                                            
+                                            <li>
+                                                <div class="collapsible-header active"><i class="material-icons">open_with</i>Main Dimensions</div>
+                                                <div class="collapsible-body" style="background:#fafafa" style="border:solid">
+                                                    <div class="row" style="padding-top:2%">
+                                                        <div class="col s2 l1" style='margin-left:5%;'>
+                                                            <input id="L" onchange="ship.updateParam(id)" type="number" step="0.1" min="0" max="100">
+                                                            <label for="Lpp">Lpp  [m]</label>
+                                                        </div>
+                                                        <div class="col s2 l1">
+                                                            <input id="B" onchange="ship.updateParam(id)" type="number" step="0.1" min="0">
+                                                            <label for="B">Beam  [m]</label>
+                                                        </div>
+                                                        <div class="col s2 l1">
+                                                            <input id="T" onchange="ship.updateParam(id)" type="number" step="0.1" min="0">
+                                                            <label for="T">Draft  [m]</label>
+                                                        </div>
+                                                        <div class="col s2 l1">
+                                                            <input id="D" onchange="ship.updateParam(id)" type="number" step="0.1" min="0">
+                                                            <label for="D">Depth  [m]</label>
+                                                        </div>
+                                                        <div class="col s2 l1">
+                                                            <input id="DB_height" onchange="ship.updateParam(id)" type="number" step="0.1" min="0">
+                                                            <label for="DB_height">Double botom height [m]</label>
+                                                        </div>
+                                                        <div class="col s2 l1">
+                                                            <input id="LWT" onchange="ship.updateParam(id)" type="number" step="0.1" min="0">
+                                                            <label for="LWT">LWT [kN]</label>
+                                                        </div>
+                                                        <div class="col s2 l1">
+                                                            <input id="DWT" onchange="ship.updateParam(id)" type="number" step="0.1" min="0">
+                                                            <label for="DWT">DWT [kN]</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="collapsible-header active"><i class="material-icons">grain</i>Material</div>
+                                                <div class="collapsible-body" style="background:#fafafa" style="border:solid">
+                                                    
+                                                    <div class="row" style="padding-top:2%">
+                                                        <div class="col s3 m2 l2" style='white-space: nowrap; margin-left:2%; margin-right:2%'>
+                                                            Steel Grade <a class="modal-trigger" href="#modal2"> <i class=" material-icons tiny">info_outline</i></a>
+                                                        </div>
+                                                        <div id="modal2" class="modal">
+                                                            <div class="modal-content">
+                                                              <h4>Steel Grades</h4>
+<!--                                                              <h5>DNVGL-RU-Ship 2018: Part 2 Chap 2 Sec 3</h5>-->
+                                                              <img src="images/steel%20grades.PNG" style="width:100%">
+                                                            </div>
+                                                          </div>
+                                                        
+                                                        <div class="col  s7 m9 l9">
+                                                            <input id="NV-NS" name="steelGrades" onchange="ship.updateParam(id)" type="radio" class="with-gap" checked>
+                                                            <label for="NV-NS">NV-NS</label>
+                                                        
+                                                            <input id="NV-32" name="steelGrades" onchange="ship.updateParam(id)" type="radio" class="with-gap" >
+                                                            <label style="margin-left:5%" for="NV-32">NV-32</label>
+                                                      
+                                                            <input id="NV-36" name="steelGrades" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="NV-36">NV-36</label>
+                                                      
+                                                            <input id="NV-40" name="steelGrades" onchange="ship.updateParam(id)" type="radio" class="with-gap">
+                                                            <label style="margin-left:5%" for="NV-40">NV-40</label>
+                                                        </div>
+                                        
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="collapsible-header active"><i class="material-icons">grid_on</i>Hull Girger Structure</div>
+                                                <div class="collapsible-body" style="background:#fafafa">
+                                                    <div class="row" style="padding-top:2%">
+                                                        
+                                                        <div class="col s2 l1" style="margin-left:5%">
+                                                            <input id="s" onchange="ship.updateParam(id)" type="number" step="0.1" min="0">
+                                                            <label for="s">stiffeners spacing [m]</label>
+                                                        </div>
+                                                        <div class="col s2 l1">
+                                                            <input id="l" onchange="ship.updateParam(id)" type="number" step="0.1" min="0">
+                                                            <label for="l">stifferners lenght [m]</label>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Load Distribution section-->
+                <div class="section">
+                    <div id="loadDistribution" class="row scrollspy">
+                        <div class="section">
+                            <h4>Weight Distribution</h4>
+                            <div class="divider"></div>
+                            <p>Input load conditions in this section. The <b>range inputs refer to the vessel length</b>, and the following field refers to the load applied to the specified length range. </p>
+
+
+                            <div id="loadSlidersPlace" class="col s12 m12 l6">
+
+                                <!--range input 1 -->
+                                <div id="sliderBlock1" class="row">
+                                    <div class="col s12">
+                                        <div class="card-panel" style="padding-top:2px;padding-bottom:1px;margin:0"><i>Weight 1</i><br><br><br>
+                                            <div class="row">
+                                                <div class="col s8">
+                                                    <div id="sliderLoadDist1"></div>
+                                                </div>
+                                                <div class="input-field col s2 offset-s1" style="margin-top:-3%">
+                                                    <input onchange="getInputValue(1)" type="number" id="inputLoad1" placeholder="load" value="1200" style="width:60">
+                                                    <label for="inputLoad1">ton/m</label>
+                                                </div>
+                                                <div class="col s1 ">
+                                                    <a onclick="clearThis(1)" class="waves-effect waves-gray tooltipped" data-position="right" data-delay="50" data-tooltip="clear"><i class="material-icons">clear</i></a>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--range input 2 -->
+                                <div id="sliderBlock2" class="row">
+                                    <div class="col s12">
+                                        <div class="card-panel" style="padding-top:2px;padding-bottom:1px;margin:0"><i>Weight 2</i><br><br><br>
+                                            <div class="row">
+                                                <div class="col s8">
+                                                    <div id="sliderLoadDist2"></div>
+                                                </div>
+                                                <div class="input-field col s2 offset-s1" style="margin-top:-3%">
+                                                    <input onchange="getInputValue(2)" type="number" id="inputLoad2" placeholder="load" value="1200" style="width:60">
+                                                    <label for="load2">ton/m</label>
+                                                </div>
+                                                <div class="col s1 ">
+                                                    <a onclick="clearThis(2)" class="waves-effect waves-gray tooltipped" data-position="right" data-delay="50" data-tooltip="clear"><i class="material-icons">clear</i></a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!--                    <a id="addLoadInputButton" class="btn-floating btn-medium waves-effect waves-light blue tooltipped" data-position="right" data-delay="50" data-tooltip="add load input" onclick="createSlider()"><i class="material-icons">add</i></a>-->
+
+                            </div>
+
+                            <!--charts-->
+                            <div id='chartsColun' class="col s12 m12 l6">
+
+                                <!-- <div id="chartWeightDist" style="height: 300px; width: 100%;"></div>                
                   <br><br>                
 -->
-                  <div id="chartLoadDist" style="height: 300px; width: 100%;"></div>                
-                  <br><br>                
-                  <div id="chartBendMom" style="height: 300px; width: 100%;"></div>                
-                  <br><br>                
-                <br><br>
-                  <div class="row">
-                      <p> Wave-induced bending moment: </p>
-                  </div>
-              </div>
+                                <div id="chartLoadDist" style="height: 300px; width: 100%;"></div>
+                                <br><br>
+                                <div id="chartBendMom" style="height: 300px; width: 100%;"></div>
+                                <br><br>
+                                <br><br>
+                                <div class="row">
+                                    <p> Wave-induced bending moment: </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--Load Distribution section over-->
+
+
+                <div class="section">
+                    <div id="GA" class="section scrollspy">
+                        <h4> Hull Girder Cross Section</h4>
+                        <div class="divider"></div>
+                        <p>Content </p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                    </div>
+                </div>
+
+
+                <div class="section">
+                    <div id="Structure" class="section scrollspy">
+                        <h4>Structural Analysis</h4>
+                        <div class="divider"></div>
+                        <p>Content </p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                        <p>a</p>
+                    </div>
+                </div>
 
             </div>
         </div>
-      </div>
-        
-<!--Load Distribution section over-->
 
-        
-    <div class="section"> 
-      <div id="GA" class="section scrollspy"> <h4>Cross Section</h4>
-          <div class="divider"></div>
-        <p>Content </p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-     </div>
-    </div>
-        
-        
-    <div class="section"> 
-      <div id="Structure" class="section scrollspy"> <h4>Structural Analysis</h4>
-          <div class="divider"></div>
-        <p>Content </p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-          <p>a</p>
-     </div>
-    </div>
-        
-  </div>
-</div>
-   
-    <!-- side scroll-->
-    <div id="scrollspy" class="col hide-on-med-and-down l2">
-        <div style="position:fixed"> 
-          <ul class="section table-of-contents">
-            <li><a href="#Parameters">Parameters</a></li>       
-            <li><a href="#loadDistribution" > Load Distribution</a></li>           
-            <li><a href="#GA">General Arrangement</a></li>
-            <li><a href="#Structure">Structural Analysis</a></li>
-          </ul>
-        </div>
-    </div>
-    <!-- side scroll over-->
-   
-</div>
-    
-
- <!-- footer -->   
-<footer class="page-footer grey ">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+        <!-- side scroll-->
+        <div id="scrollspy" class="col hide-on-med-and-down l2">
+            <div style="position:fixed">
+                <ul class="section table-of-contents">
+                    <li><a href="#Parameters">Parameters</a></li>
+                    <li><a href="#loadDistribution"> Load Distribution</a></li>
+                    <li><a href="#GA">General Arrangement</a></li>
+                    <li><a href="#Structure">Structural Analysis</a></li>
                 </ul>
-              </div>
             </div>
-          </div>
-          <div class="footer-copyright">
+        </div>
+        <!-- side scroll over-->
+
+    </div>
+
+
+    <!-- footer -->
+    <footer class="page-footer grey ">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
             <div class="container">
-            © 2017 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                © 2017 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
-          </div>
-        </footer>
-<!-- footer over-->   
+        </div>
+    </footer>
+    <!-- footer over-->
 
-<script src="materialize/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
-<script src="noUiSlider/nouislider.min.js"></script>
-<script src="wnumb/wNumb.js"></script>
-<script src="jsFiles/math.js"></script>    
-<script src="jsFiles/taffy.js"></script>    
-<script src="canvasJS/canvasjs.min.js"></script>
-<script src="canvasJS/jquery.canvasjs.min.js"></script>
-    
-<script src="jsFiles/shipConstructor.js"></script>
-<script src="jsFiles/LoadSection1.js"></script>
-<script src="jsFiles/paramSection.js"></script>
-<script src="jsFiles/materials.js"></script>
+    <script src="materialize/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script src="noUiSlider/nouislider.min.js"></script>
+    <script src="wnumb/wNumb.js"></script>
+    <script src="jsFiles/math.js"></script>
+    <script src="jsFiles/taffy.js"></script>
+    <script src="canvasJS/canvasjs.min.js"></script>
+    <script src="canvasJS/jquery.canvasjs.min.js"></script>
 
-   
+    <script src="jsFiles/materials.js"></script>
+    <script src="jsFiles/shipConstructor.js"></script>
     
-<script>
+    <script src="jsFiles/LoadSection.js"></script>
+    <script src="jsFiles/paramSection.js"></script>
+    <script src="jsFiles/crossSection.js"></script>
     
-    // initializing scrollspy
-    $(document).ready(function(){
-    $('.scrollspy').scrollSpy();
-  });
-    
-    // initializing side menu
-    $(".button-collapse").sideNav();
-    
-    $('.button-collapse').sideNav({
-      menuWidth: 300, // Default is 300
-      edge: 'left', // Choose the horizontal origin
-      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      draggable: true, // Choose whether you can drag to open on touch screens,
-      //onOpen: function(el) { /* Do Stuff* / },        // A function to be called when sideNav is opened
-      //onClose: function(el) { /* Do Stuff* / },       // A function to be called when sideNav is closed
-    }
-  );
 
-    // initializing collapsible
-     $(document).ready(function(){
-    $('.collapsible').collapsible();
-  });
 
-    
-</script>
+
+    <script>
+        // initializing scrollspy
+        $(document).ready(function() {
+            $('.scrollspy').scrollSpy();
+        });
+
+        // initializing side menu
+        $(".button-collapse").sideNav();
+
+        $('.button-collapse').sideNav({
+            menuWidth: 300, // Default is 300
+            edge: 'left', // Choose the horizontal origin
+            closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            draggable: true, // Choose whether you can drag to open on touch screens,
+            //onOpen: function(el) { /* Do Stuff* / },        // A function to be called when sideNav is opened
+            //onClose: function(el) { /* Do Stuff* / },       // A function to be called when sideNav is closed
+        });
+
+        // initializing collapsible
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+        });
+        
+        //modal 
+        $(document).ready(function(){
+        $('.modal').modal();
+        });
+
+    </script>
 </body>
