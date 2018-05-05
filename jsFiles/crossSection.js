@@ -10,8 +10,6 @@ Ship.prototype.updateCrossSectionThicknesses = function () {
     this.hullGirder.crossSection[3].width = t; //[m] 
     this.hullGirder.crossSection[4].height = t; //[m]
     this.hullGirder.crossSection[5].width = t; //[m]   
-    
-    console.log('t: ' + t);
 };
 
 Ship.prototype.updateCrossSectionHeights = function () {
@@ -62,7 +60,7 @@ Ship.prototype.z_n_n50 = function () { // calculates cross section area, inertia
     for (let i = 0; i < this.hullGirder.crossSection.length; i++) {
         this.hullGirder.crossSection[i].d = Math.abs(this.hullGirder.crossSection[i].h_BL - h_NA); //[m] - [m] = [m]            
     }
-    console.log('z_n_n50: ' + h_NA);
+    //console.log('z_n_n50: ' + h_NA);
 };
 
 Ship.prototype.I_y_n50 = function () {
@@ -76,7 +74,7 @@ Ship.prototype.I_y_n50 = function () {
     }
     this.hullGirder.crossSection.I_y_n50 = Iyy_t; // net moment of inertia of the hull transverse section about its horizontal neutral axis [m4]  
     document.getElementById('I_y_n50').innerHTML = this.hullGirder.crossSection.I_y_n50.toPrecision(3); //updating Iy value
-    console.log('I_y_n50: ' + Iyy_t);
+    //console.log('I_y_n50: ' + Iyy_t);
 };
 
 Ship.prototype.calc_Z_B_gr = function () {

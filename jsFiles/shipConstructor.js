@@ -236,6 +236,7 @@ Object.assign(Ship.prototype, {
     },
 
     find_stiff() {
+        console.log('chamou find_Stiff');
 
         let minZ = this.Z_stiff() * 1000000; //[m3] -> [cm3]
         let hold = Stiffeners[Stiffeners.length - 1];
@@ -257,6 +258,7 @@ Object.assign(Ship.prototype, {
     },
 
     t_eq() {
+        console.log('chamou t_eq');
 
         let stiff = this.hullGirder.stiffProf;
         let t_eq = this.hullGirder.t_plate + (stiff.area / 1000000) / (this.hullGirder.s); // [m] + [m2]/[m] = [m]

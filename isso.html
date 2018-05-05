@@ -432,7 +432,7 @@
                                                         <option id="HB 180x8" value="HB 180x8">HB 180x8</option>
                                                         <option id="HB 180x9" value="HB 180x9">HB 180x9</option>
                                                         <option id="HB 220x10" value="HB 220x10">HB 220x10</option>
-                                                        <option id="HP 220x12" value="HB 220x12">HB 220x12</option>
+                                                        <option id="HB 220x12" value="HB 220x12">HB 220x12</option>
                                                       </optgroup>
                                                     </select>
                                                 </div>
@@ -610,90 +610,88 @@
     <script src="jsFiles/LoadSection.js"></script>
     <script src="jsFiles/paramSection.js"></script>
     <script src="jsFiles/crossSection.js"></script>
-    
+
     <script src="vesseljs/build/Vessel.js"></script>
     <script src="vesseljs/examples/js/libs/three.js"></script>
-	<script src="vesseljs/examples/js/libs/STLLoader.js"></script>
-	<script src="vesseljs/examples/js/libs/OrbitControls.js"></script>
+    <script src="vesseljs/examples/js/libs/STLLoader.js"></script>
+    <script src="vesseljs/examples/js/libs/OrbitControls.js"></script>
     <script src="vesseljs/examples/js/Ship3D.js"></script>
 
 
 
 
     <script>
-
-
         //Ready renderer and scene
-        (function() {
-            renderer = new THREE.WebGLRenderer({
-                antialias: true
-            });
-            renderer.setPixelRatio(window.devicePixelRatio);
-            renderer.setClearColor(0xA9CCE3, 1);
-
-            // get the div that will hold the renderer
-            var container = document.getElementById('3d');
-            // add the renderer to the div
-            container.appendChild(renderer.domElement);
-
-            scene = new THREE.Scene();
-
-            //Camera and controls:
-            camera = new THREE.PerspectiveCamera(50);
-            camera.up.set(0, 0, 1);
-            scene.add(camera);
-            controls = new THREE.OrbitControls(camera, renderer.domElement);
-
-            //Respond to window resize:
-            function onResize() {
-                renderer.setSize(container.clientWidth, container.clientHeight);
-                camera.aspect = container.clientWidth / container.clientHeight;
-                camera.updateProjectionMatrix();
-            }
-            window.addEventListener("resize", onResize);
-            onResize(); //Ensure the initial setup is good too
-
-            //Add lights:
-            scene.add(new THREE.AmbientLight(0xffffff, 0.3));
-            scene.add(function() {
-                let sun = new THREE.DirectionalLight(0xffffff, 1);
-                sun.position.set(1, 1, 1);
-                return sun;
-            }());
-        })();
-
-
-
-
-        // load default spec
-        new THREE.FileLoader().load("vesseljs/examples/data/ship_specifications/PX121.json", useShipSpec);
-
-
-        
-        function useShipSpec(contents) {
-	shipspec = JSON.parse(contents);
-	shipVis = new Vessel.Ship(shipspec);
-	if (typeof ship3D !== "undefined") {
-		scene.remove(ship3D);
-	}
-	ship3D = new Ship3D(shipVis, "vesseljs/examples/data/STL files");
-	scene.add(ship3D);
-
-	// document.getElementById("length").innerHTML = (shipVis.structure.hull.attributes.LOA).toFixed(2);
-	// document.getElementById("beam").innerHTML = (shipVis.structure.hull.attributes.BOA).toFixed(2);
-	// document.getElementById("depth").innerHTML = (shipVis.structure.hull.attributes.Depth).toFixed(2);
-	
-	let LOA = shipVis.structure.hull.attributes.LOA;
-	camera.position.set(0.7*LOA, 0.7*LOA, 0.7*LOA);
-	controls.target = new THREE.Vector3(LOA/2,0,0);
-	controls.update();
-	animate();
-}
-
-function animate() {
-	requestAnimationFrame(animate);			
-	renderer.render(scene, camera);
-}
+//        (function() {
+//            renderer = new THREE.WebGLRenderer({
+//                antialias: true
+//            });
+//            renderer.setPixelRatio(window.devicePixelRatio);
+//            renderer.setClearColor(0xA9CCE3, 1);
+//
+//            // get the div that will hold the renderer
+//            var container = document.getElementById('3d');
+//            // add the renderer to the div
+//            container.appendChild(renderer.domElement);
+//
+//            scene = new THREE.Scene();
+//
+//            //Camera and controls:
+//            camera = new THREE.PerspectiveCamera(50);
+//            camera.up.set(0, 0, 1);
+//            scene.add(camera);
+//            controls = new THREE.OrbitControls(camera, renderer.domElement);
+//
+//            //Respond to window resize:
+//            function onResize() {
+//                renderer.setSize(container.clientWidth, container.clientHeight);
+//                camera.aspect = container.clientWidth / container.clientHeight;
+//                camera.updateProjectionMatrix();
+//            }
+//            window.addEventListener("resize", onResize);
+//            onResize(); //Ensure the initial setup is good too
+//
+//            //Add lights:
+//            scene.add(new THREE.AmbientLight(0xffffff, 0.3));
+//            scene.add(function() {
+//                let sun = new THREE.DirectionalLight(0xffffff, 1);
+//                sun.position.set(1, 1, 1);
+//                return sun;
+//            }());
+//        })();
+//
+//
+//
+//
+//        // load default spec
+//        new THREE.FileLoader().load("vesseljs/examples/data/ship_specifications/PX121.json", useShipSpec);
+//
+//
+//
+//        function useShipSpec(contents) {
+//            shipspec = JSON.parse(contents);
+//            shipVis = new Vessel.Ship(shipspec);
+//            if (typeof ship3D !== "undefined") {
+//                scene.remove(ship3D);
+//            }
+//            ship3D = new Ship3D(shipVis, "vesseljs/examples/data/STL files");
+//            scene.add(ship3D);
+//
+//            // document.getElementById("length").innerHTML = (shipVis.structure.hull.attributes.LOA).toFixed(2);
+//            // document.getElementById("beam").innerHTML = (shipVis.structure.hull.attributes.BOA).toFixed(2);
+//            // document.getElementById("depth").innerHTML = (shipVis.structure.hull.attributes.Depth).toFixed(2);
+//
+//            let LOA = shipVis.structure.hull.attributes.LOA;
+//            camera.position.set(0.7 * LOA, 0.7 * LOA, 0.7 * LOA);
+//            controls.target = new THREE.Vector3(LOA / 2, 0, 0);
+//            controls.update();
+//            animate();
+//        }
+//
+//        function animate() {
+//            requestAnimationFrame(animate);
+//            renderer.render(scene, camera);
+//        }
 
 
 

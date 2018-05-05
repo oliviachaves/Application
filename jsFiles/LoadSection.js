@@ -501,7 +501,7 @@ chart2 = new CanvasJS.Chart("chartHogging", {
         shared: true
     },
     data: [{
-            type: "area",
+            type: "stackedArea",
             markerType: "none",
             showInLegend: true,
             toolTipContent: "<span style=\"color:#4F81BC\"><strong>{name}: </strong></span> {y} kNm",
@@ -509,7 +509,7 @@ chart2 = new CanvasJS.Chart("chartHogging", {
             //dataPoints: ship.rule_SWBM_h
 	   },
         {
-            type: "area",
+            type: "stackedArea",
             markerType: "none",
             showInLegend: true,
             toolTipContent: "<span style=\"color:#4F81BC\"><strong>{name}: </strong></span> {y} kN",
@@ -546,7 +546,7 @@ chart3 = new CanvasJS.Chart("chartSagging", {
         shared: true
     },
     data: [{
-            type: "area",
+            type: "stackedArea",
             markerType: "none",
             showInLegend: true,
             toolTipContent: "<span style=\"color:#4F81BC\"><strong>{name}: </strong></span> {y} kNm",
@@ -554,7 +554,7 @@ chart3 = new CanvasJS.Chart("chartSagging", {
             //dataPoints: ship.rule_SWBM_h
 	   },
         {
-            type: "area",
+            type: "stackedArea",
             markerType: "none",
             showInLegend: true,
             toolTipContent: "<span style=\"color:#4F81BC\"><strong>{name}: </strong></span> {y} kN",
